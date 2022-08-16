@@ -92,4 +92,5 @@ yum install -y kubelet kubeadm kubectl
 kubeadm init
 systemctl enable --now crio
 systemctl enable --now kubelet
-
+curl https://docs.projectcalico.org/manifests/calico.yaml -O
+kubectl apply -f calico.yaml 
